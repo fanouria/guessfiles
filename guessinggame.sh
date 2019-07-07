@@ -22,8 +22,7 @@ do
 		read guess
 		isinteger $guess
 	done
-
-	nfile=$(ls -l| wc -l)
+	nfile=$(ls -l| wc -l)-1
 	if [[ $guess -eq $nfile ]]
 	then
 		echo "Congratulations!!! Your guess is right."
@@ -35,4 +34,5 @@ do
 		echo "Your guess is too low."
 	fi
 done
+	
 	
